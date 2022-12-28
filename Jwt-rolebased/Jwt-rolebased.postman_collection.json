@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "dac91b62-c857-4a95-961f-d238b751d0c3",
+		"name": "Jwt-rolebased",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18863619"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getApi",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjIyNDY1OCwiaWF0IjoxNjcyMjA2NjU4fQ.kZI6VrJhhGwqcx7NNFYHv-sb0A-Vls38aGqRgQA9m8AtGJldWPBzWM7HLOa_U9ee8QhtxoLSJaUzcyUUl8Ih2A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
